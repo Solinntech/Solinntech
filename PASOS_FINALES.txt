@@ -1,0 +1,178 @@
+📋 PASOS FINALES - COMPLETAR EN GITHUB (2 MINUTOS)
+===============================================
+
+✅ PARTE LOCAL - COMPLETADA
+Tu repositorio local está listo en: C:\Users\Andres M\Documents\solinntech-website\
+
+📦 Archivos preparados:
+   ✓ index.html (sitio completo)
+   ✓ README.md
+   ✓ INSTRUCCIONES.md
+   ✓ CNAME (para dominio personalizado)
+   ✓ .gitignore
+   ✓ Commit inicial: "Initial commit: SolinnTech website ready for GitHub Pages"
+
+
+🌐 PARTE GITHUB - TIENES QUE HACER ESTO AHORA:
+
+PASO 1: CREAR REPOSITORIO EN GITHUB
+─────────────────────────────────────
+
+1. Abre: https://github.com
+2. Haz clic en el ícono + (arriba a la derecha) → New repository
+
+3. Completa el formulario EXACTAMENTE así:
+   ┌─────────────────────────────────────────┐
+   │ Repository name: solinntech-website    │
+   │ Description: (puedes dejar vacío)      │
+   │ Visibility: ● Public                   │
+   │                                         │
+   │ ☐ Add a README file (DESMARCAR)        │
+   │ ☐ Add .gitignore (DESMARCAR)           │
+   │ ☐ Choose a license (DESMARCAR)         │
+   └─────────────────────────────────────────┘
+
+4. Haz clic en "Create repository"
+
+5. Te llevará a una página que dice:
+   "Quick setup — if you've done this kind of thing before"
+   
+   COPIA EL ENLACE HTTPS (será parecido a esto):
+   https://github.com/Solinntech/solinntech-website.git
+
+
+PASO 2: VINCULAR REPOSITORIO LOCAL CON GITHUB
+──────────────────────────────────────────────
+
+1. Abre PowerShell
+2. Navega al proyecto:
+   cd "C:\Users\Andres M\Documents\solinntech-website"
+
+3. Ejecuta ESTE comando (reemplaza la URL que copiaste):
+   git remote add origin https://github.com/Solinntech/solinntech-website.git
+
+4. Luego:
+   git push -u origin main
+
+5. AQUÍ TE PEDIRÁ AUTENTICACIÓN. OPCIONES:
+
+   🔐 OPCIÓN A: Usar Personal Access Token (RECOMENDADO)
+   ─────────────────────────────────────────────────
+   a) Abre GitHub → Settings → Developer settings → Personal access tokens
+   b) Haz clic en "Generate new token" 
+   c) Dale este nombre: "GitHub Pages"
+   d) Marca estos permisos:
+      ☑ repo (Full control of private repositories)
+   e) Haz clic en "Generate token"
+   f) COPIA el token (aparece una sola vez, no se ve de nuevo)
+   g) Vuelve a PowerShell, cuando pida "password"
+   h) Pega el token completo
+
+   🔐 OPCIÓN B: Usar GitHub CLI
+   ────────────────────────────
+   a) git push -u origin main (sin remote aún)
+   b) Se abrirá navegador GitHub para autenticación
+   c) Autoriza
+   d) Listo
+
+6. Verás mensajes como:
+   Enumerating objects: 6, done.
+   ...
+   To https://github.com/Solinntech/solinntech-website.git
+    * [new branch]      main -> main
+   Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+   ✅ SIGNIFICA QUE FUNCIONÓ
+
+
+PASO 3: ACTIVAR GITHUB PAGES
+────────────────────────────
+
+1. Ve a tu repositorio: https://github.com/Solinntech/solinntech-website
+
+2. Haz clic en "Settings" (engranaje arriba a la derecha)
+
+3. En el menú izquierdo, busca "Pages" (está abajo de "Security")
+
+4. En la sección "Build and deployment":
+   ┌──────────────────────────────────────────┐
+   │ Source: Deploy from a branch            │
+   │ Branch: main  /  (root)                  │
+   │                                          │
+   │ [Save]                                   │
+   └──────────────────────────────────────────┘
+
+5. Haz clic en [Save]
+
+6. Espera 1-2 minutos y recarga la página
+
+7. Verás el mensaje:
+   "Your site is live at https://solinntech.github.io/solinntech-website"
+
+   🎉 ¡TU SITIO ESTÁ ONLINE!
+
+
+PASO 4: AGREGAR DOMINIO PERSONALIZADO (SOLINNTECH.COM)
+──────────────────────────────────────────────────────
+
+IMPORTANTE: Este paso requiere que hayas registrado el dominio
+
+A) EN GITHUB (Settings → Pages):
+   ┌──────────────────────────────────────┐
+   │ Custom domain: solinntech.com       │
+   │ [Save]                               │
+   └──────────────────────────────────────┘
+
+   GitHub creará un archivo CNAME automáticamente
+
+B) EN TU REGISTRADOR DE DOMINIO (Namecheap, GoDaddy, etc):
+   
+   1. Inicia sesión en el registrador donde compraste solinntech.com
+   
+   2. Busca "Manage DNS" o "DNS Settings"
+   
+   3. Encontrarás una tabla de DNS Records, MODIFICA así:
+   
+      ┌─────────┬────┬──────────────────────┐
+      │ Type    │ A  │ Points to            │
+      ├─────────┼────┼──────────────────────┤
+      │ A       │ @  │ 185.199.108.153      │
+      │ A       │ @  │ 185.199.109.153      │
+      │ A       │ @  │ 185.199.110.153      │
+      │ A       │ @  │ 185.199.111.153      │
+      └─────────┴────┴──────────────────────┘
+   
+   4. Si tienes un registro CNAME para www:
+      www CNAME solinntech.github.io
+   
+   5. Haz clic en "Save"
+   
+   6. ESPERA 24-48 HORAS (a veces funciona en 10 minutos)
+
+
+✅ CUANDO TODO ESTÁ LISTO:
+
+• Sitio en GitHub Pages: https://solinntech.github.io/solinntech-website
+• Con dominio personalizado: https://solinntech.com (después de 24-48h)
+
+
+📝 CAMBIOS FUTUROS:
+
+Si necesitas actualizar el sitio, desde PowerShell:
+
+cd "C:\Users\Andres M\Documents\solinntech-website"
+(edita index.html en VS Code)
+git add .
+git commit -m "Descripción del cambio"
+git push
+
+Se actualiza automáticamente en 1-2 minutos.
+
+
+❓ ¿ALGO NO FUNCIONA?
+
+Lee el archivo "INSTRUCCIONES.md" en tu carpeta del proyecto.
+Tiene solución de problemas completa.
+
+
+¡Listo! Ahora tienes TODO preparado. Solo sigue estos 4 pasos en GitHub.
