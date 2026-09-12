@@ -1,8 +1,0 @@
-# Archivos no necesarios en el repositorio
-.git/
-node_modules/
-.DS_Store
-Thumbs.db
-*.log
-.env
-.env.local
